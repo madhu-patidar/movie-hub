@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError, map } from 'rxjs/operators';
 import { throwError } from 'rxjs';
+import { IMovie } from '../home/movie/movie.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class HttpService {
   constructor(private http: HttpClient) { }
 
   get(url){
-    return this.http.get(url).pipe(catchError(this.handleError))
+    return this.http.get<any>(url).pipe(catchError(this.handleError))
   }
 
   post(url, body){

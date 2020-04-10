@@ -5,3 +5,8 @@
 .example-spacer {
     flex: 1 1 auto;
 }
+
+.home-icon {
+    position: relative;
+    top: 4px;
+}

@@ -17,7 +17,7 @@ import { ErrorInterceptor } from './middlewares/errorInterceptor';
     AppRoutingModule,
     LayoutModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },

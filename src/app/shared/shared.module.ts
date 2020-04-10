@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import { ScrollingModule} from '@angular/cdk/scrolling';
 import {MatMenuModule} from '@angular/material/menu';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {MatMenuModule} from '@angular/material/menu';
     ReactiveFormsModule,
     MatTableModule,
     ScrollingModule,
-    MatMenuModule
+    MatMenuModule,
+    RouterModule
   ],
   exports: [
     MatToolbarModule,
@@ -37,7 +39,8 @@ import {MatMenuModule} from '@angular/material/menu';
     ReactiveFormsModule,
     MatTableModule,
     ScrollingModule,
-    MatMenuModule
+    MatMenuModule,
+    RouterModule
   ]
 })
 export class SharedModule { }

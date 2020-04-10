@@ -4,7 +4,7 @@ import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
 import { Router } from '@angular/router';
-
+import { IMovie } from '../movie.model';
 
 @Component({
   selector: 'app-list',
@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 export class MovieListComponent implements OnInit {
   paginator = {page: 1, limit: 4}
   displayedColumns: string[];
-  dataSource: any;
+  dataSource: IMovie[];
   searchText
   constructor(
     private movieService: MovieService,

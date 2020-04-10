@@ -15,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     HomeRoutingModule,
     SharedModule,
     MatAutocompleteModule,
-    FormsModule
+    FormsModule,
+    
   ]
 })
 export class HomeModule { }

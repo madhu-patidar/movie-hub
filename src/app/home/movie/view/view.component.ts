@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { MovieService } from '../../movie.service';
+import { IMovie } from '../movie.model';
 
 @Component({
   selector: 'app-view',
@@ -8,7 +9,7 @@ import { MovieService } from '../../movie.service';
   styleUrls: ['./view.component.css']
 })
 export class MovieViewComponent implements OnInit {
-  movie: any;
+  movie: IMovie;
 
   constructor(
     private route: ActivatedRoute,

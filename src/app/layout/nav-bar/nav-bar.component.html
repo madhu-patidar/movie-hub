@@ -1,6 +1,10 @@
 <mat-toolbar color="accent">
     <mat-toolbar-row>
-        <span class="cursor" (click)="goToHome()">Moview Hub</span>
+
+        <a routerLink="/movies">
+            <mat-icon class="home-icon">home</mat-icon>
+            Home
+        </a>
         <span class="example-spacer"></span>
         <p align="right" *ngIf="user">
             Welcome! {{user.firstName}} {{user.lastName}}

@@ -9,10 +9,13 @@
             <span> {{movie.name}} </span>
         </p>
         <p>
-            <span> <img src="{{movie.image}}" alt=""> </span>
+            <span> <img height="120px" src="{{movie.image}}" alt=""> </span>
         </p>
         <p>
             <span>  <b>IMDB Rating:</b> </span> {{movie['imdb rating']}}
+        </p>
+        <p align="right">
+            <button mat-raised-button color="accent" routerLink="/movies">Movie list</button>
         </p>
     </mat-card-content>
 </mat-card>
