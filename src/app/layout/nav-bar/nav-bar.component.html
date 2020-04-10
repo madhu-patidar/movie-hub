@@ -1,0 +1,26 @@
+<mat-toolbar color="accent">
+    <mat-toolbar-row>
+        <span>Moview Hub</span>
+        <span class="example-spacer"></span>
+        <p align="right" *ngIf="user">
+            Welcome! {{user.firstName}} {{user.lastName}}
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="logout()">
+                  <mat-icon>dialpad</mat-icon>
+                  <span>Logout</span>
+            </button>
+                <button mat-menu-item disabled>
+                  <mat-icon>voicemail</mat-icon>
+                  <span>coming soon</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>notifications_off</mat-icon>
+                  <span>coming soon</span>
+                </button>
+            </mat-menu>
+        </p>
+    </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,33 @@
+{
+    "posts": [{
+        "id": 1,
+        "title": "json-server",
+        "author": "typicode"
+    }],
+    "comments": [{
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+    }],
+    "users": [
+        { "id": 1, "username": "admin", "password": "admin" },
+        { "id": 2, "username": "user2@gmail.com", "password": "************" },
+        { "id": 3, "username": "user3@gmail.com", "password": "************" },
+        { "id": 4, "username": "user4@gmail.com", "password": "************" },
+        { "id": 5, "username": "user5@gmail.com", "password": "************" },
+        { "id": 6, "username": "user6@gmail.com", "password": "************" }
+    ],
+    "movies": [
+        { "id": 1, "Movie Name": "3 idiots", "IMDb Rating": 8.4, "theme photo": "https://m.media-amazon.com/images/M/MV5BNTkyOGVjMGEtNmQzZi00NzFlLTlhOWQtODYyMDc2ZGJmYzFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UY268_CR2,0,182,268_AL__QL50.jpg" },
+        { "id": 2, "Movie Name": "kahaani", "IMDb Rating": 8.1, "theme photo": "https://m.media-amazon.com/images/M/MV5BNTkyOGVjMGEtNmQzZi00NzFlLTlhOWQtODYyMDc2ZGJmYzFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UY268_CR2,0,182,268_AL__QL50.jpg" },
+        { "id": 3, "Movie Name": "A wednesday", "IMDb Rating": 8.1, "theme photo": "https://m.media-amazon.com/images/M/MV5BNTkyOGVjMGEtNmQzZi00NzFlLTlhOWQtODYyMDc2ZGJmYzFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UY268_CR2,0,182,268_AL__QL50.jpg" },
+        { "id": 4, "Movie Name": "Anbe Sivam (2003)", "IMDb Rating": 8.5, "theme photo": "https://m.media-amazon.com/images/M/MV5BNTkyOGVjMGEtNmQzZi00NzFlLTlhOWQtODYyMDc2ZGJmYzFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UY268_CR2,0,182,268_AL__QL50.jpg" },
+        {
+            "id": 5,
+            "Movie Name": "Chupke Chupke (1975)",
+            "IMDb Rating": 8.1,
+            "theme photo": "https://m.media-amazon.com/images/M/MV5BNTkyOGVjMGEtNmQzZi00NzFlLTlhOWQtODYyMDc2ZGJmYzFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UY268_CR2,0,182,268_AL__QL50.jpg"
+        },
+        { "id": 6, "Movie Name": "Anand (1971)", "IMDb Rating": 8.9, "theme photo": "https://m.media-amazon.com/images/M/MV5BNTkyOGVjMGEtNmQzZi00NzFlLTlhOWQtODYyMDc2ZGJmYzFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UY268_CR2,0,182,268_AL__QL50.jpg" }
+    ]
+}
