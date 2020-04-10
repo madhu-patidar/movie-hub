@@ -7,14 +7,10 @@ import { LayoutModule } from './layout/layout.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorInterceptor } from './middlewares/errorInterceptor';
-import { FormcontrolValidationMsgDirective } from './directives/formcontrol-validation-msg.directive';
-import { FormsubmitValidationMsgDirective } from './directives/formsubmit-validation-msg.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormcontrolValidationMsgDirective,
-    FormsubmitValidationMsgDirective
   ],
   imports: [
     BrowserModule,

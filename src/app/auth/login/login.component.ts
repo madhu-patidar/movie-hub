@@ -14,12 +14,15 @@ export class LoginComponent implements OnInit {
 
   hide:boolean = true
   loginForm: FormGroup;
-  formErrors: any;
+  formErrors: any = {};
+  submitted: boolean;
+  invalidUser: boolean;
 
   constructor(
     private router: Router,
     private accountService: AccountService
   ) { 
+    this.formErrors =  ERROR_MESSAGES;
     this.loginForm = new FormGroup({
       username: new FormControl('', Validators.required),
       password: new FormControl(''),
@@ -30,6 +33,8 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
+    this.submitted = true;
+    this.invalidUser = false;
     if(this.loginForm.invalid) return
     this.accountService.login(
       this.loginForm.value
@@ -38,7 +43,7 @@ export class LoginComponent implements OnInit {
         this.accountService.createSession(res[0])
         this.router.navigate(['/movies'])
       }else{
-        this.formErrors['invalidUser'] =  ERROR_MESSAGES['invalidUser']
+        this.invalidUser = true;
       }
      
     })

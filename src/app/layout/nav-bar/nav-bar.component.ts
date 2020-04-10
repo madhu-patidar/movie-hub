@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from 'src/app/auth/services/account.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,7 +11,8 @@ export class NavBarComponent implements OnInit {
   user: any;
 
   constructor(
-    private accountService: AccountService
+    private accountService: AccountService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -22,6 +24,9 @@ export class NavBarComponent implements OnInit {
     this.user = this.accountService.currentUser;
   }
 
+  goToHome(){
+    this.router.navigate(['/'])
+  }
   logout(){
     this.accountService.destorySession()
   }

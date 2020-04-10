@@ -21,9 +21,12 @@ export class MovieViewComponent implements OnInit {
         (params: Params) => {
           let id = params["id"];
           this.movieService.getMovie(id).subscribe(res =>{
-            this.movie = res
+            this.movie = res;
           })
         }
       );
     }
+
+
+    
   }

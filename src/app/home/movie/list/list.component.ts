@@ -30,12 +30,11 @@ export class MovieListComponent implements OnInit {
       this.movieService.getAllMovies(this.paginator).subscribe(
         res => {
           this.displayedColumns = Object.keys(res[0])
-          this. dataSource = res
-          this.options = [
-            "1 idiots",
-            "2 idiots",
-            "3 idiots",
-        ]
+          this. dataSource = res;
+          let resentSearchHistory:any = localStorage.getItem('searchHistory');
+          if(resentSearchHistory) resentSearchHistory = JSON.parse(resentSearchHistory);
+          else resentSearchHistory = [];
+          this.options = resentSearchHistory;
           this.filteredOptions = this.myControl.valueChanges
       .pipe(
         startWith(''),
@@ -56,6 +55,14 @@ export class MovieListComponent implements OnInit {
 
   optionSelected(event){
    let selectedMovie = this.dataSource.filter(option => option.name ===  event.option.value)[0];
+    let resentSearchHistory:any = localStorage.getItem('searchHistory');
+    if(resentSearchHistory) resentSearchHistory = JSON.parse(resentSearchHistory);
+    else resentSearchHistory = [];
+
+    if(!resentSearchHistory.includes(event.option.value)){
+      resentSearchHistory.push(event.option.value)
+    }
+    localStorage.setItem('searchHistory', JSON.stringify(resentSearchHistory));
     this.router.navigate([`movies/${selectedMovie.id}`])
   }
 

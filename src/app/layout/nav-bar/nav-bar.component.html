@@ -1,6 +1,6 @@
 <mat-toolbar color="accent">
     <mat-toolbar-row>
-        <span>Moview Hub</span>
+        <span class="cursor" (click)="goToHome()">Moview Hub</span>
         <span class="example-spacer"></span>
         <p align="right" *ngIf="user">
             Welcome! {{user.firstName}} {{user.lastName}}
@@ -9,14 +9,14 @@
               </button>
             <mat-menu #menu="matMenu">
                 <button mat-menu-item (click)="logout()">
-                  <mat-icon>dialpad</mat-icon>
+                  <mat-icon>power_settings_new</mat-icon>
                   <span>Logout</span>
             </button>
                 <button mat-menu-item disabled>
                   <mat-icon>voicemail</mat-icon>
                   <span>coming soon</span>
                 </button>
-                <button mat-menu-item>
+                <button mat-menu-item disabled>
                   <mat-icon>notifications_off</mat-icon>
                   <span>coming soon</span>
                 </button>
